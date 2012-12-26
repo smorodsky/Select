@@ -1,0 +1,13 @@
+h2. Select
+
+Extension of Adobe Illustrator for select specific objects.
+
+Using the menu commands "File/Scripts/Select/" for select objects on current document.
+
+h3. Installation
+
+Download the file _select.zxp_ and double-click it. Follow the instructions of Adobe Extension Manager.
+
+h3. Uninstall
+
+Run Adobe Extension Manager. Find the item "Select" in the list and click "Remove" button.

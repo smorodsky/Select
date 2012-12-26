@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionUpdateInformation>
+	<version>1.0.0</version>
+	<download>http://github.com/smorodsky/select/raw/master/select.zxp</download>
+	<description url="http://raw.github.com/smorodsky/select/master/updates/updates.html">
+	<![CDATA[The 1.0.0 version fixes known problems.<br>
+	New features include the ability to download updates.]]>
+	</description>
+</ExtensionUpdateInformation>

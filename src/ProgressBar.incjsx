@@ -1,0 +1,38 @@
+﻿
+// конструктор объекта progressbar
+// 2012-12-26
+
+function ProgressBar(caption, maxValue)
+{
+	var value = 0;
+    var time = (new Date()).getTime();
+	var palette = new Window('palette', caption); 
+    var progressbar = palette.add('progressbar', 
+		{x:10, y:12, width:350, height:12}, 0, maxValue);
+    
+    this.setValue = function(newValue) {
+        
+        if (newValue >= maxValue) {
+            palette.hide();
+            return;
+        }
+    
+        if (time && 
+            maxValue / 2 > newValue &&
+            (new Date()).getTime() - time > 2000) {
+            
+            time = null;
+            palette.show();
+        }
+    
+        if (time || newValue - value < maxValue / 100) return;
+        
+        value = newValue;
+        progressbar.value = newValue;
+        palette.update();
+    }
+
+    this.hide = function() {
+        palette.hide();
+    }
+}
