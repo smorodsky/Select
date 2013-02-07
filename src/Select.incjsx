@@ -19,7 +19,7 @@ function Select(collection, fun) {
        
             pBar.setValue(i);
             var item = col[i];
-            fun(item , i ,col) && item.selected = true;
+            fun(item, i, col) && item.selected = true;
        } 
        catch (e) {}
     }
