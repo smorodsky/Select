@@ -4,7 +4,4 @@
 #include "ProgressBar.incjsx"
 #include "Select.incjsx"
         
-Select('meshItems', function(){
-    
-    return true;            
-});
+Select('meshItems');

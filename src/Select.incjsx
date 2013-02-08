@@ -1,15 +1,17 @@
 ﻿// Select filtered items of Illustrator
-// 2012-12-26
+// 2013-02-08
 
 // collection - name of document's collection,
 // fun        - function-filter. Returned true if need select this item.
 
-function Select(collection, fun) {
+function Select(collection, /* optional */ fun, mode) {
     
     if (app.documents.length == 0 || app.activeDocument.views.length == 0) {
         return;
     }
-    app.selection = undefined;
+    if (!mode) mode = Select.MODE_RESET;
+    
+    (mode == Select.MODE_RESET) && app.selection = undefined;
     var col = app.activeDocument[collection];
     var pBar = new ProgressBar('Select', col.length - 1);
     
@@ -19,8 +21,23 @@ function Select(collection, fun) {
        
             pBar.setValue(i);
             var item = col[i];
-            fun(item, i, col) && item.selected = true;
-       } 
-       catch (e) {}
+            
+            var rc = fun ? fun(item, i, col) : true;
+            
+            switch (mode) {
+                case Select.MODE_RESET:
+                case Select.MODE_OR:
+                    rc && item.selected = true;
+                    break;
+                    
+                case Select.MODE_AND:
+                    item.selected && item.selected = rc;
+                    break;
+            }
+       } catch (e) {}
     }
 }
+
+Select.MODE_RESET = 0;
+Select.MODE_OR    = 1;
+Select.MODE_AND   = 2;

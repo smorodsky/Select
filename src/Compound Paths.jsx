@@ -4,7 +4,4 @@
 #include "ProgressBar.incjsx"
 #include "Select.incjsx"
         
-Select('compoundPathItems', function(){
-    
-    return true;            
-});
+Select('compoundPathItems');

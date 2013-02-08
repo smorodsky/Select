@@ -4,6 +4,4 @@
 #include "ProgressBar.incjsx"
 #include "Select.incjsx"
         
-Select('symbolItems', function(s){
-    return true;
-});
+Select('symbolItems');

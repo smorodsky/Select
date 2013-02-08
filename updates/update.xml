@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExtensionUpdateInformation>
-	<version>1.1.0</version>
+	<version>1.2.0</version>
 	<download>http://github.com/smorodsky/select/raw/master/select.zxp</download>
 	<description url="http://raw.github.com/smorodsky/select/master/updates/updates.html">
-	<![CDATA[The 1.1.0 Add two commands for select grayed objects.]]>
+	<![CDATA[The 1.2.0 Add commands for select transparent or overprinted objects.<br>
+New command Gray2CMYK for convert all grayscale objects to CMYK.]]>
 	</description>
 </ExtensionUpdateInformation>
