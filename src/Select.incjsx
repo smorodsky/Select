@@ -1,17 +1,32 @@
-﻿// Select filtered items of Illustrator
-// 2013-02-08
+// Select filtered items of Illustrator
+// 2013-04-15
 
 // collection - name of document's collection,
 // fun        - function-filter. Returned true if need select this item.
+// mode       - add to or subtract from existing selections.
 
 function Select(collection, /* optional */ fun, mode) {
     
     if (app.documents.length == 0 || app.activeDocument.views.length == 0) {
         return;
     }
-    if (!mode) mode = Select.MODE_RESET;
+    if (typeof mode == 'undefined') {
+    	mode = Select.MODE_RESET;
+    	
+    	if (ScriptUI.environment.keyboardState.shiftKey) {
+    		mode = Select.MODE_ADD;
+    	}
+    	if (ScriptUI.environment.keyboardState.altKey) {
+    		mode = Select.MODE_SUBTRACT;
+    	}
+    	if (ScriptUI.environment.keyboardState.shiftKey && 
+    		ScriptUI.environment.keyboardState.altKey) {
+    		
+    		mode = Select.MODE_INTERSECT;
+    	}
+    }
+    if (mode == Select.MODE_RESET) app.selection = undefined;
     
-    (mode == Select.MODE_RESET) && app.selection = undefined;
     var col = app.activeDocument[collection];
     var pBar = new ProgressBar('Select', col.length - 1);
     
@@ -24,13 +39,15 @@ function Select(collection, /* optional */ fun, mode) {
             
             var rc = fun ? fun(item, i, col) : true;
             
-            switch (mode) {
+           	switch (mode) {
                 case Select.MODE_RESET:
-                case Select.MODE_OR:
+                case Select.MODE_ADD:
                     rc && item.selected = true;
                     break;
-                    
-                case Select.MODE_AND:
+                case Select.MODE_SUBTRACT:
+                	rc && item.selected = false;
+                	break;
+                case Select.MODE_INTERSECT:
                     item.selected && item.selected = rc;
                     break;
             }
@@ -38,6 +55,7 @@ function Select(collection, /* optional */ fun, mode) {
     }
 }
 
-Select.MODE_RESET = 0;
-Select.MODE_OR    = 1;
-Select.MODE_AND   = 2;
+Select.MODE_RESET     = 0;
+Select.MODE_ADD       = 1;
+Select.MODE_SUBTRACT  = 2;
+Select.MODE_INTERSECT = 3;

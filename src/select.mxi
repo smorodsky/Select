@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <macromedia-extension
 	name="Select"
-	version="1.2.0"
+	version="2.0.0"
 	type="Command">
 
 	<!-- Describe the author -->
@@ -28,23 +28,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	<!-- Describe the extension -->
 	
 	<description>
-		<![CDATA[Select specific objects in Adobe Illustrator.]]>
+		<![CDATA[Select objects by characteristic]]>
 	</description>
 	
 	<!-- Describe where the extension shows in the UI of the product -->
 
 	<ui-access>
-	<![CDATA[Using the menu commands "File/Scripts/Select/" for select objects on current document.]]>
+	<![CDATA[You can select objects based on various groupings, including by formatting attribute such as brush strokes or clipping masks. Using the menu commands File/Scripts/Select for select objects on current document. Hold down Shift to add to the exists selection. Hold down Alt to subtract another selection. Hold down Alt+Shift to portion of the original selection that you want to select.]]>
 	</ui-access>
 
 	<!-- Describe the files that comprise the extension -->
 	
 	<files>
-		<file name="Gray2CMYK.jsx" destination="$presets/en_US/Scripts" />		
 		<file name="Blending Mode Not Normal.jsx" destination="$presets/en_US/Scripts/Select" />		<file name="Clipping Paths.jsx"    destination="$presets/en_US/Scripts/Select" />		<file name="Closed Paths.jsx"      destination="$presets/en_US/Scripts/Select" />		<file name="Compound Paths.jsx"    destination="$presets/en_US/Scripts/Select" />		<file name="Dashed Paths.jsx"      destination="$presets/en_US/Scripts/Select" />		<file name="Embedded Rasters.jsx"  destination="$presets/en_US/Scripts/Select" />		<file name="Filled Paths.jsx"      destination="$presets/en_US/Scripts/Select" />		<file name="Gradient Meshes.jsx"   destination="$presets/en_US/Scripts/Select" />		<file name="Gray Fill.jsx"         destination="$presets/en_US/Scripts/Select" />		<file name="Gray Stroke.jsx"       destination="$presets/en_US/Scripts/Select" />		<file name="Groups.jsx"            destination="$presets/en_US/Scripts/Select" />		<file name="Guides.jsx"            destination="$presets/en_US/Scripts/Select" />		<file name="License.txt"           destination="$presets/en_US/Scripts/Select" />		<file name="Opacity Less 100%.jsx" destination="$presets/en_US/Scripts/Select" />		<file name="Open Paths.jsx"        destination="$presets/en_US/Scripts/Select" />		<file name="Overprint Fill.jsx"    destination="$presets/en_US/Scripts/Select" />		<file name="Overprint Stroke.jsx"  destination="$presets/en_US/Scripts/Select" />		<file name="Placed EPS Art.jsx"    destination="$presets/en_US/Scripts/Select" />		<file name="ProgressBar.incjsx"    destination="$presets/en_US/Scripts/Select" />		<file name="Readme.txt"            destination="$presets/en_US/Scripts/Select" />		<file name="Select.incjsx"         destination="$presets/en_US/Scripts/Select" />		<file name="Stroked Paths.jsx"     destination="$presets/en_US/Scripts/Select" />		<file name="Symbols.jsx"           destination="$presets/en_US/Scripts/Select" />		<file name="Undashed Paths.jsx"    destination="$presets/en_US/Scripts/Select" />		<file name="Unfilled Paths.jsx"    destination="$presets/en_US/Scripts/Select" />	
 		<file name="Unstroked Paths.jsx"   destination="$presets/en_US/Scripts/Select" />
 		
-		<file name="Gray2CMYK.jsx" destination="$presets/en_GB/Scripts" />		
 		<file name="Blending Mode Not Normal.jsx" destination="$presets/en_GB/Scripts/Select" />		<file name="Clipping Paths.jsx"    destination="$presets/en_GB/Scripts/Select" />		<file name="Closed Paths.jsx"      destination="$presets/en_GB/Scripts/Select" />		<file name="Compound Paths.jsx"    destination="$presets/en_GB/Scripts/Select" />		<file name="Dashed Paths.jsx"      destination="$presets/en_GB/Scripts/Select" />		<file name="Embedded Rasters.jsx"  destination="$presets/en_GB/Scripts/Select" />		<file name="Filled Paths.jsx"      destination="$presets/en_GB/Scripts/Select" />		<file name="Gradient Meshes.jsx"   destination="$presets/en_GB/Scripts/Select" />		<file name="Gray Fill.jsx"         destination="$presets/en_GB/Scripts/Select" />		<file name="Gray Stroke.jsx"       destination="$presets/en_GB/Scripts/Select" />		<file name="Groups.jsx"            destination="$presets/en_GB/Scripts/Select" />		<file name="Guides.jsx"            destination="$presets/en_GB/Scripts/Select" />		<file name="License.txt"           destination="$presets/en_GB/Scripts/Select" />		<file name="Opacity Less 100%.jsx" destination="$presets/en_GB/Scripts/Select" />		<file name="Open Paths.jsx"        destination="$presets/en_GB/Scripts/Select" />		<file name="Overprint Fill.jsx"    destination="$presets/en_GB/Scripts/Select" />		<file name="Overprint Stroke.jsx"  destination="$presets/en_GB/Scripts/Select" />		<file name="Placed EPS Art.jsx"    destination="$presets/en_GB/Scripts/Select" />		<file name="ProgressBar.incjsx"    destination="$presets/en_GB/Scripts/Select" />		<file name="Readme.txt"            destination="$presets/en_GB/Scripts/Select" />		<file name="Select.incjsx"         destination="$presets/en_GB/Scripts/Select" />		<file name="Stroked Paths.jsx"     destination="$presets/en_GB/Scripts/Select" />		<file name="Symbols.jsx"           destination="$presets/en_GB/Scripts/Select" />		<file name="Undashed Paths.jsx"    destination="$presets/en_GB/Scripts/Select" />		<file name="Unfilled Paths.jsx"    destination="$presets/en_GB/Scripts/Select" />	
 		<file name="Unstroked Paths.jsx"   destination="$presets/en_GB/Scripts/Select" />
 	</files>
